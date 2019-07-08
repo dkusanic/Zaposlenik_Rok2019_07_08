@@ -83,5 +83,71 @@ namespace Zaposlenik_Rok2019_07_08
                     txtBoxProsjecnaPlaca.Text = z.IzracunajProsjecnuPlacu().ToString();
             }
         }
+
+        private void txtBoxTraziIme_TextChanged(object sender, EventArgs e)
+        {
+            List<Zaposlenik> traziIme = new List<Zaposlenik>();
+            if (txtBoxTraziIme.Text == "")
+                OsvjeziPrikaz();
+            else
+            {
+                lstBoxZaposlenici.Items.Clear();
+                foreach(Zaposlenik z in listaZaposlenika)
+                {
+                    if (z.ImePrezime.Contains(txtBoxTraziIme.Text))
+                        traziIme.Add(z);
+                }
+                foreach (Zaposlenik z in traziIme)
+                    lstBoxZaposlenici.Items.Add(z.ImePrezime);
+            }
+        }
+
+        private void txtBoxTraziPlacaMin_TextChanged(object sender, EventArgs e)
+        {
+            List<Zaposlenik> traziMin = new List<Zaposlenik>();
+            if (txtBoxTraziPlacaMin.Text == "")
+                OsvjeziPrikaz();
+            else
+            {
+                lstBoxZaposlenici.Items.Clear();
+                foreach(Zaposlenik z in listaZaposlenika)
+                {
+                    bool vecaPlaca = false;
+                    foreach (double placa in z.MjesecnePlace)
+                    {
+                        if (placa > double.Parse(txtBoxTraziPlacaMin.Text))
+                            vecaPlaca = true;
+                    }
+                    if (vecaPlaca)
+                        traziMin.Add(z);
+                }
+                foreach (Zaposlenik z in traziMin)
+                    lstBoxZaposlenici.Items.Add(z.ImePrezime);
+            }
+        }
+
+        private void txtBoxPlacaTraziMax_TextChanged(object sender, EventArgs e)
+        {
+            List<Zaposlenik> traziMax = new List<Zaposlenik>();
+            if (txtBoxPlacaTraziMax.Text == "")
+                OsvjeziPrikaz();
+            else
+            {
+                lstBoxZaposlenici.Items.Clear();
+                foreach (Zaposlenik z in listaZaposlenika)
+                {
+                    bool manjaPlaca = false;
+                    foreach (double placa in z.MjesecnePlace)
+                    {
+                        if (placa > double.Parse(txtBoxPlacaTraziMax.Text))
+                            manjaPlaca = true;
+                    }
+                    if (manjaPlaca)
+                        traziMax.Add(z);
+                }
+                foreach (Zaposlenik z in traziMax)
+                    lstBoxZaposlenici.Items.Add(z.ImePrezime);
+            }
+        }
     }
 }

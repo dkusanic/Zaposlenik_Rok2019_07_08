@@ -45,9 +45,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtBoxDodajPlacu = new System.Windows.Forms.TextBox();
             this.btnDodajPlacu = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtBoxTraziIme = new System.Windows.Forms.TextBox();
+            this.txtBoxTraziPlacaMin = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtBoxPlacaTraziMax = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -195,9 +203,9 @@
             // 
             // txtBoxDodajPlacu
             // 
-            this.txtBoxDodajPlacu.Location = new System.Drawing.Point(76, 13);
+            this.txtBoxDodajPlacu.Location = new System.Drawing.Point(83, 13);
             this.txtBoxDodajPlacu.Name = "txtBoxDodajPlacu";
-            this.txtBoxDodajPlacu.Size = new System.Drawing.Size(197, 20);
+            this.txtBoxDodajPlacu.Size = new System.Drawing.Size(190, 20);
             this.txtBoxDodajPlacu.TabIndex = 1;
             // 
             // btnDodajPlacu
@@ -210,22 +218,92 @@
             this.btnDodajPlacu.UseVisualStyleBackColor = true;
             this.btnDodajPlacu.Click += new System.EventHandler(this.btnDodajPlacu_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.txtBoxPlacaTraziMax);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.txtBoxTraziPlacaMin);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.txtBoxTraziIme);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Location = new System.Drawing.Point(277, 199);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(285, 104);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Pretraživanje:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Po imenu:";
+            // 
+            // txtBoxTraziIme
+            // 
+            this.txtBoxTraziIme.Location = new System.Drawing.Point(83, 13);
+            this.txtBoxTraziIme.Name = "txtBoxTraziIme";
+            this.txtBoxTraziIme.Size = new System.Drawing.Size(190, 20);
+            this.txtBoxTraziIme.TabIndex = 1;
+            this.txtBoxTraziIme.TextChanged += new System.EventHandler(this.txtBoxTraziIme_TextChanged);
+            // 
+            // txtBoxTraziPlacaMin
+            // 
+            this.txtBoxTraziPlacaMin.Location = new System.Drawing.Point(83, 41);
+            this.txtBoxTraziPlacaMin.Name = "txtBoxTraziPlacaMin";
+            this.txtBoxTraziPlacaMin.Size = new System.Drawing.Size(190, 20);
+            this.txtBoxTraziPlacaMin.TabIndex = 3;
+            this.txtBoxTraziPlacaMin.TextChanged += new System.EventHandler(this.txtBoxTraziPlacaMin_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 44);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 13);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Plaća (min):";
+            // 
+            // txtBoxPlacaTraziMax
+            // 
+            this.txtBoxPlacaTraziMax.Location = new System.Drawing.Point(83, 71);
+            this.txtBoxPlacaTraziMax.Name = "txtBoxPlacaTraziMax";
+            this.txtBoxPlacaTraziMax.Size = new System.Drawing.Size(190, 20);
+            this.txtBoxPlacaTraziMax.TabIndex = 5;
+            this.txtBoxPlacaTraziMax.TextChanged += new System.EventHandler(this.txtBoxPlacaTraziMax_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 74);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Plaća (max):";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(567, 313);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Zaposlenici";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -249,6 +327,13 @@
         private System.Windows.Forms.Button btnDodajPlacu;
         private System.Windows.Forms.TextBox txtBoxDodajPlacu;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox txtBoxPlacaTraziMax;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtBoxTraziPlacaMin;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtBoxTraziIme;
+        private System.Windows.Forms.Label label7;
     }
 }
 
