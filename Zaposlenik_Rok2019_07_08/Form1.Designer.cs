@@ -41,8 +41,13 @@
             this.btnDodajZaposlenika = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtBoxProsjecnaPlaca = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBoxDodajPlacu = new System.Windows.Forms.TextBox();
+            this.btnDodajPlacu = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -167,11 +172,50 @@
             this.txtBoxProsjecnaPlaca.Size = new System.Drawing.Size(150, 20);
             this.txtBoxProsjecnaPlaca.TabIndex = 5;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnDodajPlacu);
+            this.groupBox3.Controls.Add(this.txtBoxDodajPlacu);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Location = new System.Drawing.Point(277, 118);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(285, 75);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Dodavanje plaće:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Iznos plaće:";
+            // 
+            // txtBoxDodajPlacu
+            // 
+            this.txtBoxDodajPlacu.Location = new System.Drawing.Point(76, 13);
+            this.txtBoxDodajPlacu.Name = "txtBoxDodajPlacu";
+            this.txtBoxDodajPlacu.Size = new System.Drawing.Size(197, 20);
+            this.txtBoxDodajPlacu.TabIndex = 1;
+            // 
+            // btnDodajPlacu
+            // 
+            this.btnDodajPlacu.Location = new System.Drawing.Point(9, 39);
+            this.btnDodajPlacu.Name = "btnDodajPlacu";
+            this.btnDodajPlacu.Size = new System.Drawing.Size(264, 23);
+            this.btnDodajPlacu.TabIndex = 2;
+            this.btnDodajPlacu.Text = "Dodaj plaću";
+            this.btnDodajPlacu.UseVisualStyleBackColor = true;
+            this.btnDodajPlacu.Click += new System.EventHandler(this.btnDodajPlacu_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -180,6 +224,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -199,6 +245,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBoxImePrezime;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnDodajPlacu;
+        private System.Windows.Forms.TextBox txtBoxDodajPlacu;
+        private System.Windows.Forms.Label label6;
     }
 }
 

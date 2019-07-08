@@ -63,5 +63,25 @@ namespace Zaposlenik_Rok2019_07_08
             }
             OsvjeziPrikaz(lstBoxZaposlenici.SelectedItem.ToString());
         }
+
+        private void btnDodajPlacu_Click(object sender, EventArgs e)
+        {
+            if (lstBoxZaposlenici.SelectedItem == null)
+                MessageBox.Show("Nije odabran zaposlenik!");
+            else
+            {
+                foreach (Zaposlenik z in listaZaposlenika)
+                {
+                    if (lstBoxZaposlenici.SelectedItem.ToString() == z.ImePrezime)
+                        z.DodajPlacu(double.Parse(txtBoxDodajPlacu.Text));
+                }
+            }
+            OsvjeziPrikaz(lstBoxZaposlenici.SelectedItem.ToString());
+            foreach (Zaposlenik z in listaZaposlenika)
+            {
+                if (lstBoxZaposlenici.SelectedItem.ToString() == z.ImePrezime)
+                    txtBoxProsjecnaPlaca.Text = z.IzracunajProsjecnuPlacu().ToString();
+            }
+        }
     }
 }
